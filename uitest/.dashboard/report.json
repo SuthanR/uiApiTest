@@ -1,0 +1,214 @@
+[
+  {
+    "elements": [
+      {
+        "id": "as-a-user-of-this-web,-i-would-like-to-buy-a-car-with-specific-model-with-a-new-features.;verify-the-happy-flow-&-possible-ways-to-search-for-a-car",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Verify the happy flow & possible ways to search for a car",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "the car website is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 3928400
+            },
+            "line": 5,
+            "match": {
+              "location": "C:\\Source\\qwicTest\\uitest\\cucumber\\step_definitions\\cartrade_steps.js:12"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "the car Audi is chosen",
+            "result": {
+              "status": "passed",
+              "duration": 2515100
+            },
+            "line": 6,
+            "match": {
+              "location": "C:\\Source\\qwicTest\\uitest\\cucumber\\step_definitions\\cartrade_steps.js:17"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "select the A3",
+            "result": {
+              "status": "passed",
+              "duration": 555501
+            },
+            "line": 7,
+            "match": {
+              "location": "C:\\Source\\qwicTest\\uitest\\cucumber\\step_definitions\\cartrade_steps.js:21"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "enter the require feature Manual",
+            "result": {
+              "status": "passed",
+              "duration": 610600
+            },
+            "line": 8,
+            "match": {
+              "location": "C:\\Source\\qwicTest\\uitest\\cucumber\\step_definitions\\cartrade_steps.js:25"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "click the search option",
+            "result": {
+              "status": "passed",
+              "duration": 756100
+            },
+            "line": 9,
+            "match": {
+              "location": "C:\\Source\\qwicTest\\uitest\\cucumber\\step_definitions\\cartrade_steps.js:29"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "validate the Audi and A3 and Manual options are in alert box",
+            "result": {
+              "status": "passed",
+              "duration": 1712700
+            },
+            "line": 10,
+            "match": {
+              "location": "C:\\Source\\qwicTest\\uitest\\cucumber\\step_definitions\\cartrade_steps.js:33"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "click Ok to proceed",
+            "result": {
+              "status": "passed",
+              "duration": 814300
+            },
+            "line": 11,
+            "match": {
+              "location": "C:\\Source\\qwicTest\\uitest\\cucumber\\step_definitions\\cartrade_steps.js:37"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "id": "as-a-user-of-this-web,-i-would-like-to-buy-a-car-with-specific-model-with-a-new-features.;verify-the-happy-flow-&-possible-ways-to-search-for-a-car",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Verify the happy flow & possible ways to search for a car",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "the car website is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 971800
+            },
+            "line": 5,
+            "match": {
+              "location": "C:\\Source\\qwicTest\\uitest\\cucumber\\step_definitions\\cartrade_steps.js:12"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "the car Honda is chosen",
+            "result": {
+              "status": "passed",
+              "duration": 808500
+            },
+            "line": 6,
+            "match": {
+              "location": "C:\\Source\\qwicTest\\uitest\\cucumber\\step_definitions\\cartrade_steps.js:17"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "select the Civic",
+            "result": {
+              "status": "passed",
+              "duration": 947099
+            },
+            "line": 7,
+            "match": {
+              "location": "C:\\Source\\qwicTest\\uitest\\cucumber\\step_definitions\\cartrade_steps.js:21"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "enter the require feature !@#$12",
+            "result": {
+              "status": "passed",
+              "duration": 752199
+            },
+            "line": 8,
+            "match": {
+              "location": "C:\\Source\\qwicTest\\uitest\\cucumber\\step_definitions\\cartrade_steps.js:25"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "click the search option",
+            "result": {
+              "status": "passed",
+              "duration": 798400
+            },
+            "line": 9,
+            "match": {
+              "location": "C:\\Source\\qwicTest\\uitest\\cucumber\\step_definitions\\cartrade_steps.js:29"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "validate the Honda and Civic and !@#$12 options are in alert box",
+            "result": {
+              "status": "passed",
+              "duration": 416600
+            },
+            "line": 10,
+            "match": {
+              "location": "C:\\Source\\qwicTest\\uitest\\cucumber\\step_definitions\\cartrade_steps.js:33"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "click Ok to proceed",
+            "result": {
+              "status": "passed",
+              "duration": 587099
+            },
+            "line": 11,
+            "match": {
+              "location": "C:\\Source\\qwicTest\\uitest\\cucumber\\step_definitions\\cartrade_steps.js:37"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "as-a-user-of-this-web,-i-would-like-to-buy-a-car-with-specific-model-with-a-new-features.",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "As a user of this web, I would like to buy a car with specific model with a new features.",
+    "tags": [],
+    "uri": "C:\\Source\\qwicTest\\uitest\\cucumber\\features\\cartrade.feature"
+  }
+]
