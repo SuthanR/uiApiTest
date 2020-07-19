@@ -168,35 +168,35 @@
 </img><div>
 <div class="scenario">
 <div class="scenario-heading">
-<span class="scenario-keyword">Scenario: [1:11]</span><span class="scenario-name">Select the cars details</span>
+<span class="scenario-keyword">Scenario: [1:10]</span><span class="scenario-name">Retrieve the cars api data &amp; verify the specific data , status &amp; response time</span>
 </div>
 <div class="step-row">
 <div class="step-cell passed">* url 'http://localhost:3000/'</div>
-<div class="time-cell passed">0.00348</div>
+<div class="time-cell passed">0.002591</div>
 </div>
-<div class="preformatted">21:36:56.164 karate.env system property was: null</div>
+<div class="preformatted">22:26:23.785 karate.env system property was: null</div>
 <div class="step-row">
 <div class="step-cell passed">Given path 'cars'</div>
-<div class="time-cell passed">0.002813</div>
+<div class="time-cell passed">0.002638</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">When method get</div>
-<div class="time-cell passed">0.943393</div>
+<div class="time-cell passed">0.934267</div>
 </div>
-<div class="preformatted">21:36:57.024 request:
+<div class="preformatted">22:26:24.644 request:
 1 &gt; GET http://localhost:3000/cars
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: localhost:3000
 1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
 
-21:36:57.067 response time in milliseconds: 29.39
+22:26:24.706 response time in milliseconds: 46.79
 1 &lt; 200
 1 &lt; Access-Control-Allow-Credentials: true
 1 &lt; Cache-Control: no-cache
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Date: Sun, 19 Jul 2020 19:36:57 GMT
+1 &lt; Date: Sun, 19 Jul 2020 20:26:24 GMT
 1 &lt; ETag: W/"4328-Ww2zq8nDF6d0qbayonNlQckVGMs"
 1 &lt; Expires: -1
 1 &lt; Pragma: no-cache
@@ -1293,13 +1293,13 @@
 ]</div>
 <div class="step-row">
 <div class="step-cell passed">Then status 200</div>
-<div class="time-cell passed">0.000021</div>
+<div class="time-cell passed">0.000019</div>
 </div>
 <div class="step-row">
-<div class="step-cell passed">Then print response</div>
-<div class="time-cell passed">0.013127</div>
+<div class="step-cell passed">And print response</div>
+<div class="time-cell passed">0.011022</div>
 </div>
-<div class="preformatted">21:36:57.140 [print] [
+<div class="preformatted">22:26:24.753 [print] [
   {
     "brand": "Seat",
     "models": [
@@ -2392,23 +2392,146 @@
 </div>
 <div class="step-row">
 <div class="step-cell passed">* def out = { "brand": "Seat", "models": [ "Alhambra", "Altea", "Altea XL", "Arosa", "Cordoba", "Cordoba Vario", "Exeo", "Ibiza", "Ibiza ST", "Exeo ST", "Leon", "Leon ST", "Inca", "Mii", "Toledo"]}</div>
-<div class="time-cell passed">0.000364</div>
+<div class="time-cell passed">0.000304</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">* match output[0].brand == 'Seat'</div>
-<div class="time-cell passed">0.005895</div>
+<div class="time-cell passed">0.005221</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">* match output[10].models[4] == "#string"</div>
-<div class="time-cell passed">0.003215</div>
+<div class="time-cell passed">0.002866</div>
 </div>
 <div class="step-row">
-<div class="step-cell passed">And match each output[*].brand == '#string'</div>
-<div class="time-cell passed">0.002633</div>
+<div class="step-cell passed">Then match each output[*].brand == '#string'</div>
+<div class="time-cell passed">0.001917</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">Then match output[*] contains out</div>
-<div class="time-cell passed">0.000437</div>
+<div class="time-cell passed">0.000398</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">Then assert responseTime &lt; 1000</div>
+<div class="time-cell passed">0.0056</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading">
+<span class="scenario-keyword">Scenario: [2:30]</span><span class="scenario-name">Delete the cars api which is not implemented</span>
+</div>
+<div class="step-row">
+<div class="step-cell passed">* url 'http://localhost:3000/'</div>
+<div class="time-cell passed">0.000159</div>
+</div>
+<div class="preformatted">22:26:24.784 karate.env system property was: null</div>
+<div class="step-row">
+<div class="step-cell passed">Given path 'cars'</div>
+<div class="time-cell passed">0.00011</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And method delete</div>
+<div class="time-cell passed">0.034428</div>
+</div>
+<div class="preformatted">22:26:24.784 request:
+1 &gt; DELETE http://localhost:3000/cars
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: localhost:3000
+1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
+
+22:26:24.816 response time in milliseconds: 31.67
+1 &lt; 404
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Cache-Control: no-cache
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 2
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Sun, 19 Jul 2020 20:26:24 GMT
+1 &lt; ETag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
+1 &lt; Expires: -1
+1 &lt; Pragma: no-cache
+1 &lt; Vary: Origin, Accept-Encoding
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Powered-By: Express
+{}</div>
+<div class="step-row">
+<div class="step-cell passed">Then status 404</div>
+<div class="time-cell passed">0.000021</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading">
+<span class="scenario-keyword">Scenario: [3:37]</span><span class="scenario-name">Post the cars without payload which is not possible</span>
+</div>
+<div class="step-row">
+<div class="step-cell passed">* url 'http://localhost:3000/'</div>
+<div class="time-cell passed">0.000206</div>
+</div>
+<div class="preformatted">22:26:24.847 karate.env system property was: null</div>
+<div class="step-row">
+<div class="step-cell passed">* def payload =</div>
+<div class="time-cell passed">0.000236</div>
+</div>
+<div class="preformatted">{
+        "brand": "TATA",
+        "models": [
+            "Land Rover",
+            "Sumo"
+        ]
+    }</div>
+<div class="step-row">
+<div class="step-cell passed">Given path 'cars'</div>
+<div class="time-cell passed">0.000207</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And request payload</div>
+<div class="time-cell passed">0.000032</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And method post</div>
+<div class="time-cell passed">0.058515</div>
+</div>
+<div class="preformatted">22:26:24.847 request:
+1 &gt; POST http://localhost:3000/cars
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 47
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: localhost:3000
+1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
+{"brand":"TATA","models":["Land Rover","Sumo"]}
+
+22:26:24.909 response time in milliseconds: 44.88
+1 &lt; 500
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Cache-Control: no-cache
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: text/html; charset=utf-8
+1 &lt; Date: Sun, 19 Jul 2020 20:26:24 GMT
+1 &lt; ETag: W/"46e-uksPfJOUCA7zhaSD3lIxp/G7srE"
+1 &lt; Expires: -1
+1 &lt; Pragma: no-cache
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+1 &lt; X-Powered-By: Express
+TypeError: Cannot read property 'id' of undefined
+    at Function.createId (C:\Source\qwic\qa-assignment\search-form\node_modules\json-server\lib\server\mixins.js:57:39)
+    at Function.insert (C:\Source\qwic\qa-assignment\search-form\node_modules\lodash-id\src\index.js:47:49)
+    at C:\Source\qwic\qa-assignment\search-form\node_modules\lodash\lodash.js:4368:28
+    at arrayReduce (C:\Source\qwic\qa-assignment\search-form\node_modules\lodash\lodash.js:683:21)
+    at baseWrapperValue (C:\Source\qwic\qa-assignment\search-form\node_modules\lodash\lodash.js:4367:14)
+    at LodashWrapper.wrapperValue (C:\Source\qwic\qa-assignment\search-form\node_modules\lodash\lodash.js:9050:14)
+    at create (C:\Source\qwic\qa-assignment\search-form\node_modules\json-server\lib\server\router\plural.js:237:48)
+    at Layer.handle [as handle_request] (C:\Source\qwic\qa-assignment\search-form\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Source\qwic\qa-assignment\search-form\node_modules\express\lib\router\route.js:137:13)
+    at next (C:\Source\qwic\qa-assignment\search-form\node_modules\express\lib\router\route.js:131:14)</div>
+<div class="step-row">
+<div class="step-cell passed">Then status 500</div>
+<div class="time-cell passed">0.00001</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And match response contains 'TypeError'</div>
+<div class="time-cell passed">0.003536</div>
 </div>
 </div>
 </div>
