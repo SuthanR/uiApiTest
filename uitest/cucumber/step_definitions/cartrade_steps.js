@@ -3,6 +3,8 @@ const expect = chai.expect;
 browser.driver.manage().window().maximize();
 const carPage = require("../page_objects/cartrade_page.js");
 
+//The purpose of this step definations to define all the steps so that it will help to avoid repitative work
+
 module.exports = function () {
 
     this.World = function MyWorld() {

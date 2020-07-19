@@ -1,6 +1,8 @@
 'use strict'
 const chai = require('chai').use(require('chai-as-promised'));
 const expect = chai.expect;
+
+// As part of this file, all the page objects will be scripted here.
 module.exports = function () {
 
     this.get = () => {
@@ -33,11 +35,11 @@ module.exports = function () {
     };
 
     this.clickSearch = () => {
-        browser.sleep(3000);
         return element(by.id('B')).click();
 
     };
 
+    // create a json based on input then validate against the gettext in alert
     this.verifyAlert = (brand, model, key) => {
 
         let obj = {
