@@ -21,21 +21,20 @@ module.exports = function () {
 
     this.selectModel = (model) => {
         browser.sleep(3000)
-        element(by.id('S2')).isEnabled().then(function () {
-        }).then(() => {
+        element(by.id('S2')).isEnabled().then(function () {}).then(() => {
             let select = by.css("option[value= " + model + "]");
             return element(select).click();
         })
     };
 
     this.enterKeyword = (keyword) => {
-       return  element(by.id('T')).sendKeys(keyword);
+        return element(by.id('T')).sendKeys(keyword);
 
     };
 
     this.clickSearch = () => {
         browser.sleep(3000);
-       return element(by.id('B')).click();
+        return element(by.id('B')).click();
 
     };
 
@@ -46,7 +45,7 @@ module.exports = function () {
             brand: brand,
             keyword: key
         }
-        let result = JSON.stringify(obj);     
+        let result = JSON.stringify(obj);
         browser.switchTo().alert().getText().then(text => {
             expect(text).to.contain(result);
 
