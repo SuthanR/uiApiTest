@@ -9,8 +9,11 @@ Set up :
 
 Install Node
 git clone https://github.com/SuthanR/qwicTest
+
 From your project root directory(/uitest) in cmd: npm install then check the respective version of modules installed
+
 Go to the project location in terminal(/uitest) in cmd: webdriver-manager start (to start the webdriver)(if issues with driver please try webdriver-manager update then start)
+
 Go to project location in another terminal(/uitest) in cmd: protractor protractor.conf.js or protractor (script will start running)
 
 Folder and config:
